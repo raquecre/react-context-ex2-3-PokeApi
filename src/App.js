@@ -4,16 +4,16 @@ import './App.css';
 import Header from './Components/Header';
 import Main from './Components/Main';
 import 'bootstrap/dist/css/bootstrap.css';
-import ThemesContextProvider from './context';
+import ThemeContextProvider from './context';
 //import PokeCards from './Components/PokeCards';
 function App() {
+  
   return (
     <div className="App">
+      <ThemeContextProvider>
       <Header />
-      <Main />
-     {/*  <ThemesContextProvider>
         <Main />
-      </ThemesContextProvider> */}
+      </ThemeContextProvider>
     </div>
   );
 }

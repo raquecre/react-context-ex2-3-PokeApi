@@ -6,7 +6,7 @@ const Pokelist = () => {
 
     return (
         <div className=" border m-3">
-            <h5>Pokelist</h5>
+            <h2 className="h2 d-flex align-items-center">Pokelist</h2>
             
                 <PokeCards />
            

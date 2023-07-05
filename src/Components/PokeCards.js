@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react"
 //import { PokeContext } from "../context"
 import axios from "axios";
 
-const urlPokemon = "https://pokeapi.co/api/v2/pokemon/?offset=20&limit=151"
+const urlPokemon = "https://pokeapi.co/api/v2/pokemon?limit=150&offset=0"
 const PokeCards = () => {
     const [pokemon, setPokemon] = useState([])
 
@@ -19,9 +19,9 @@ const PokeCards = () => {
             {resultPokemon?.map((onePokemon,i) => {
                 
                 return (
-                    <div className="border">
+                    <div className="border d-flex align-items-center ">
                         <img className="border" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i+1}.png`} /> 
-                        <h4 className="h4"> Name: <strong>{onePokemon.name}</strong>  </h4>
+                        <h5> Name: <strong>{onePokemon.name}</strong>  </h5>
                     </div>
 
                 )

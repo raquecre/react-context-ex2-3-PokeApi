@@ -1,13 +1,15 @@
+import { ThemeContext } from "../context"
+import {  Theme } from "../context"
 import Pokelist from "./Pokelist"
 
-const Main = () => {
+ const Main = () => {
 
     return (
-        <div  className=" border m-3">
+        <div className={Theme ? ` text-light bg-dark ` : ` bg-light text-dark`}>
             <Pokelist />
         </div>
     )
 }
 
 
-export default Main
+export default Main 
