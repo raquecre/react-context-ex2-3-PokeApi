@@ -1,15 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import PokeContextProvider from './context';
-import Header from './Components/Header';
 
+import './App.css';
+//import PokeContextProvider from './context';
+import Header from './Components/Header';
+import Main from './Components/Main';
+import 'bootstrap/dist/css/bootstrap.css';
+import ThemesContextProvider from './context';
+//import PokeCards from './Components/PokeCards';
 function App() {
   return (
     <div className="App">
       <Header />
-      <PokeContextProvider>
+      <Main />
+     {/*  <ThemesContextProvider>
         <Main />
-      </PokeContextProvider>
+      </ThemesContextProvider> */}
     </div>
   );
 }
