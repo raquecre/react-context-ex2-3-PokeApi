@@ -4,17 +4,19 @@ import './App.css';
 import Header from './Components/Header';
 import Main from './Components/Main';
 import 'bootstrap/dist/css/bootstrap.css';
-import ThemeContextProvider from './context';
+
+import { useContext } from "react"
+import { ThemeContext} from "./context"
+
 //import PokeCards from './Components/PokeCards';
 function App() {
-  
+  const { theme } = useContext(ThemeContext);
+  console.log(theme);
   return (
-    <div className="App">
-      <ThemeContextProvider>
-      <Header />
+      <div className={`App ${theme}`}>
+        <Header />
         <Main />
-      </ThemeContextProvider>
-    </div>
+      </div>
   );
 }
 

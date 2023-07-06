@@ -1,11 +1,13 @@
-import { ThemeContext } from "../context"
-import {  Theme } from "../context"
+import { createContext } from "react"
+import { ThemeContext, useContext } from "../context"
+import { theme } from "../context"
 import Pokelist from "./Pokelist"
 
- const Main = () => {
-
+const Main = () => {/* 
+    const { theme, setTheme } = useContext(ThemeContext);
+ */
     return (
-        <div className={Theme ? ` text-light bg-dark ` : ` bg-light text-dark`}>
+        <div /* className={`Main` + theme} */>
             <Pokelist />
         </div>
     )
